@@ -1,7 +1,19 @@
 ### CREATE AT USER CLASS####
-
+class User
+	
 	##Requirements:
 		#The user class should initialize with an email, password and birthdate
+	def initialize(email, password, birthdate)
+		@email = email
+		@password = password
+		@birthdate = birthdate
+	end
+	
+	def login(password)
+		if  @password == password
+			puts "access confirmed"
+		else 
+			puts "denied"
 
 		#The user class should have reader & writer methods for:
 			#Name
